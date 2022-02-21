@@ -1,5 +1,5 @@
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:vakinha_burger_mobile/app/modules/splash/splash_page.dart';
+import 'package:delicias_burger_mobile/app/modules/splash/splash_page.dart';
 
 class SplashRouters {
   SplashRouters._();
