@@ -1,8 +1,7 @@
-name: vakinha_burger_mobile
-description: Projeto Vakinha Burger
+name: delicias_burger_mobile
+description: Projeto Delicias Burger Delivery
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
 
 version: 1.0.0+1
 
@@ -14,6 +13,9 @@ dependencies:
     sdk: flutter
     
   get: ^4.6.1
+  get_storage: ^2.0.3
+  validatorless: ^1.2.1
+  intl: ^0.17.0
 
   cupertino_icons: ^1.0.2
 
@@ -26,3 +28,15 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+  fonts:
+    - family: mplus1
+      fonts:
+        - asset: assets/fonts/mplus1/MPLUS1p-Regular.ttf
+          style: normal
+        - asset: assets/fonts/mplus1/MPLUS1p-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/mplus1/MPLUS1p-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/mplus1/MPLUS1p-ExtraBold.ttf
+          weight: 800

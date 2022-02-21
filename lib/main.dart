@@ -1,18 +1,20 @@
+import 'package:delicias_burger_mobile/app/core/ui/delicias_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:vakinha_burger_mobile/app/modules/routes/splash_routers.dart';
+import 'package:delicias_burger_mobile/app/modules/routes/splash_routers.dart';
 
 void main() {
-  runApp(const VakinhaBurgerMainApp());
+  runApp(const DeliciasBurgerMainApp());
 }
 
-class VakinhaBurgerMainApp extends StatelessWidget {
-  const VakinhaBurgerMainApp({Key? key}) : super(key: key);
+class DeliciasBurgerMainApp extends StatelessWidget {
+  const DeliciasBurgerMainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Vakinha Burger',
+      title: "Delicia's Burger",
+      theme: DeliciasUI.theme,
       getPages: [
         ...SplashRouters.routers,
       ],
