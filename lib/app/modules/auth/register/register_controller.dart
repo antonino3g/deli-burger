@@ -7,8 +7,8 @@ class RegisterController extends GetxController
     with LoaderMixin, MessagesMixin {
   final AuthRepository _authRepository;
 
-  final loading = false.obs;
-  final message = Rxn<MessageModel>();
+  final _loading = false.obs;
+  final _message = Rxn<MessageModel>();
 
   RegisterController({
     required AuthRepository authRepository,
@@ -16,8 +16,24 @@ class RegisterController extends GetxController
 
   @override
   void onInit() {
-    loaderListener(loading);
-    messageListener(message);
+    loaderListener(_loading);
+    messageListener(_message);
     super.onInit();
+  }
+
+  Future<void> register({
+    required String name,
+    required String email,
+    required String password,
+  }) async {
+    _loading.toggle();
+
+    final UserModel = await _authRepository.register(name, email, password);
+
+    _message(MessageModel(
+      title: 'Sucesso',
+      message: 'Cadastro realizado com sucesso.',
+      type: MessageType.info,
+    ));
   }
 }

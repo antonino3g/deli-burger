@@ -15,6 +15,7 @@ class DeliciasBurgerMainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Delicia's Burger",
       theme: DeliciasUI.theme,
       initialBinding: ApplicationBinding(),

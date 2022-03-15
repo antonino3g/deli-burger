@@ -35,6 +35,7 @@ class _RegisterPageState extends DeliState<RegisterPage, RegisterController> {
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Form(
+              key: _formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -74,6 +75,7 @@ class _RegisterPageState extends DeliState<RegisterPage, RegisterController> {
                   ),
                   DeliciasTextformfield(
                     label: 'Senha',
+                    obscureText: true,
                     controller: _passwordEC,
                     validator: Validatorless.multiple(
                       [
@@ -88,6 +90,7 @@ class _RegisterPageState extends DeliState<RegisterPage, RegisterController> {
                   ),
                   DeliciasTextformfield(
                     label: 'Confirme a senha',
+                    obscureText: true,
                     validator: Validatorless.multiple(
                       [
                         Validatorless.required('Confirme a senha'),
