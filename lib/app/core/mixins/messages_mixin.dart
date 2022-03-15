@@ -6,7 +6,7 @@ mixin MessagesMixin on GetxController {
     ever<MessageModel?>(message, (model) async {
       if (model != null) {
         Get.snackbar(
-          model.tittle,
+          model.title,
           model.message,
           backgroundColor: model.type.color(),
           colorText: model.type.textColor(),
@@ -18,12 +18,12 @@ mixin MessagesMixin on GetxController {
 }
 
 class MessageModel {
-  final String tittle;
+  final String title;
   final String message;
   final MessageType type;
 
   MessageModel({
-    required this.tittle,
+    required this.title,
     required this.message,
     required this.type,
   });
